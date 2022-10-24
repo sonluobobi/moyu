@@ -1,0 +1,167 @@
+常用命令
+
+find . -type f -name *.log //查询路径下带有名字的文件
+
+find / -name php.ini 查看php.ini的路径
+
+chmod -R 777 /home/cookiex/abc //附加权限 
+
+crontab -l  查看定时任务
+
+cd /var/spool/cron/ 计划任务位置
+
+ rmdir MyDocuments rm -rf MyDocuments/ 删除文件夹 
+
+ rmdir push_log /删除空目录命令
+
+ ls --full-time ./ | sed -n '/2021-06-29/p' 显示对应日期的文件
+
+find ./ -name '*.txt' -newermt '2020-12-06' ! -newermt '2020-12-07' |xargs -i  cp {} ../cai/  复制固定日期内的日志
+
+find ./ -name '*.txt' -newermt '2021-06-29' ! -newermt '2021-06-30' |xargs tar  -zcvf 20216029.tar.bz2 打包固定日期内的文件
+
+/etc/hosts 对应IP和域名配置
+
+grep -rn "DB_NAME" ./  查找内容包含某字符串的文件  grep -rn "权限66" ./
+
+grep -E "进入addheadframe" mapserver.[1-8].log.[1-9] 查找日志
+
+debug_backtrace() php最终函数
+
+
+/data/sanxiao/www/gmt-sanxiao-eu.game.koramgame.com/classes/ctrl/CtrlBase.php   #你没有操作权限66，限制位置，
+
+
+# tar czvf shuanggou.tar.gz ./store 打包成tar.gz格式压缩包
+
+# tar zxvf renwolesshel.tar.gz  解压tar.gz格式压缩包  
+
+
+ F:\php_2\gmt\inf\operation.php  后台配置路径，出现cannot find driver 的情况的时候
+
+ <html>
+<head><title>403 Forbidden</title></head>
+<body bgcolor="white">
+<center><h1>403 Forbidden</h1></center>
+<hr><center>nginx/1.14.0</center> 
+</body>
+</html>
+
+查询包含某字段的进程
+ps -e | grep map 
+
+
+查询当前路径下包含特殊字符的文件的字符位置
+grep -r "reward" ./*
+
+
+查看正在运行的端口netstat -aptn
+
+重启unison命令，启动重复
+
+nohup /usr/bin/unison-2.27 -socket 3020
+
+etstat -tunlp用于显示tcp，udp的端口和进程等相关情况，如下图(盗图)
+
+查看端口开放
+/etc/rc.d/rc.fw
+允许10001-39999的端口访
+$IPTABLES -A INPUT -p tcp --dport 10001:39999 -j ACCEPT
+
+HTTP_X_FORWARDED_FOR
+这个可以取到客户端原始ip
+
+测试端口通不通命令
+telnet 192.168.1.31 873
+
+telnet 13.31.116.12 22
+
+telnet 106.75.229.241 22
+数据库刷新命令
+flush privileges
+
+
+
+8 是字节
+
+
+清除亚龙正则
+
+\{[^\{\}]*\{[^\{\}]*\}[^\{\}]*"yalong_id":[0-9]*[1-3],[^\{\}]*\},
+
+
+查找包含某字符串的文件
+grep -rn "Hello" .
+
+查看文件夹大小命令
+du -h --max-depth=1 ./
+
+--max-depth 表示只显示一层文件夹大小，深度为1
+
+find . -name "player_character_2018*" | xargs rm 
+
+可以通过设置电脑的MTU来达成这个，不过需要用管理员运行cmd
+netsh interface ipv4 show subinterfaces
+netsh interface ipv4 set subinterface “以太网 3” mtu=1400 store=persistent
+
+搜索文件里面有特定关键字的内容
+grep -rn "新增多语言内容"
+
+rg '$v.is_ban' ./*
+
+
+战龙获取rsync地址文件
+
+rsync  rsync://global-zlcs-static@us.sync.gameark.cn/global-zlcs-static/cfg/notice
+
+密码 Z4dB>dxt4
+
+
+git常用命令
+
+在github里添加origin
+git remote add origin 
+
+如果之前配置过一次，再次配置则会提示以下错误：
+ERROR：远程 origin 已经存在。
+此时只需要将远程配置删除，重新添加即可；
+git remote rm origin
+git remote add origin https://github.com/sonluobobi/zlcs-www.git
+再次提交文件即可正常使用
+
+上传文件
+git push -u origin master
+
+作者：Edwin_dl
+链接：https://www.jianshu.com/p/7130674b0e1c
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+rsync启动命令
+rsync --daemon
+
+git 拉取项目到本地
+
+1.新建文件夹
+mkdir digist
+2.初始化git
+git init
+3.与原创git仓库建立连接
+git remote add origin http://xxx
+4.将远程master分支同步到本地git分支
+git fetch origin master
+5.将代码拉取下来
+git pull origin master
+6.查看远程和本地分支及当前所在分支
+git branch -a
+7.切换远程test分支到本地并命名为test分支
+git checkout -b test origin/test
+8.查看git用户名邮箱
+git config user.name
+git config user.email
+
+查询宝塔域名信息
+/etc/init.d/bt default
+
+

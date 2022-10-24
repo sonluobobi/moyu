@@ -1,0 +1,8 @@
+x:service index per server (1~9)
+
+ProxyServerType:0 port:400x1  (game server)
+ProxyServerType:1 port:410x1  (vchat server)
+ProxyServerType:2 port:420x1  (pk server)
+ProxyServerType:3 port:230x1  (center server)
+
+server port must not great than min  ip_local_port_range(42767) (limited by install.sh:echo '42768 61000' > /proc/sys/net/ipv4/ip_local_port_range)

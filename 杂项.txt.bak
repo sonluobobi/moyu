@@ -1,0 +1,432 @@
+待做事项
+
+版本更新的时候，做一个自动更新数据库的脚本（紧急）  
+
+找时间看看如何自动更新gmt数据库的服务器列表 * 
+
+弄一个发奖流程
+
+自动更新导号网页服务器地址 
+
+装服流程
+
+迁移魔域二pk服管理（配置待处理，需要有表，另外表的地址也要处理一下 
+ 
+魔域2白名单改成不用ip，用账号
+
+//热更测试中心服，中央服更新的代码，CommandCtrl:serverConnectTestG2pk();
+
+sanxiao更新下服务端功能，
+
+查询金币的IP地址错误，确认下脚本的金币配置
+
+问卷邮件没有拿到
+
+竞速域名其他大区要弄一下
+
+
+
+弄个脚本自动修改俄服和欧服维护时间 *
+
+服务器异常状态从sgp加到俄罗斯和欧洲 
+
+周末找点课程学习一下,找点财经的，编程的，装修的
+
+找时间看看C+的代码 
+
+整理下计划，确认后续的技能架构
+
+每周检查下数据库备份，写进周报
+
+魔域一各大区的资源更新
+
+魔域二的资源更新
+
+
+
+spring mvc
+spring 的bean 管理 
+
+dao层 
+
+
+ /data/sanxiao/pkt0/bin/backup_db.sh all >/
+
+F:\php_2\pk_admin\pk_admin\config\pk.vchat.center.php
+
+ gmt.eu.global.hoc.koramgame.com 
+ 
+ gmt.eu.global.hoc.koramgame.com
+
+后台调用流程
+F:\php_2\gmt\classes\common\Rest.php 的 Rest_setNotice 
+F:\php_2\gmt\lib\restClient\kunlunapi_php5_restlib.php 
+F:\php_2\server_www\platform\ctrl\GameTools.php 里的 setNotice   
+F:\php_2\server_www\platform\service\NoticeService.php 里面调用  BaseServerAccesser::sendToBase 
+ 生成连接$url = "http://" . SERVER_DOMAIN . '/webproxy.php?act='.$func; （方法在opcodes.php里面定义） 
+WebProxyCtrl 调用lua的插入公告逻辑
+t2.sm2.kunlun.com/platform/index.php?act=GameTools.setNotice&t=1607762526&s=c0228ccef737dc3517d3504b589e1988" 操作成功
+
+后台有ip限制的地方
+server_www/platform/libs security.php
+
+server_www/stats_entarce/lib security.php
+
+php充值过程
+平台回调
+http://game-serv-t99-sanxiao-eu.game.koramgame.com/web/web_app/index.php?act=Platform.notifyVouchMsg&v=1.0
+php 查看数据库没有充值记录
+插入充值记录，status = 0
+通过proxy回调到lua，端口配置在game-serv-t99-sanxiao-eu.game.koramgame.com/include
+lua收到回调，修改充值记录status = 1
+请求平台金币接口，查询金币数量，发货，通知客户端
+
+
+
+装新服注意事项
+注意日志弄成长uid
+act默认使用的code表为6 位置F:\php_2\act\libs\config/config.php 
+
+select friend from  tbl_player_character  where id = 135882
+
+update  tbl_player_character set friend = '{"my_month":1}'  where id = 135882
+
+["http:\/\/s1.moyu.kunlun.com\/for_backend\/index.php?c=Csv&a=Equip&t=1610533134&s=59f3b952e09321d25f5427f72216eb3b --","http:\/\/s1.moyu.kunlun.com\/for_backend\/index.php?c=Csv&a=Monster&t=1610533155&s=1d2b55732825412d772769737875c4d8 --"] 2021-1-13 18:19:35
+
+
+********
+自动更新大区代码php脚本
+
+脚本位置，大区1区
+/data/moyu/publish/bin 脚本名字 ./all-publish-web.sh
+
+自动更新的代码路径
+/data/moyu/publish/publish-web
+*********
+
+http://t2.sm2.kunlun.com/webproxy.php?op=gmadm
+
+
+没有头绪现在，先看下sendtook是怎么样工作的先，然后再想解决方法
+】
+
+是一种服务器流域用户计算机上的小文件，这台计算机会发送coldd
+php过滤器用于验证和过滤来自非安全来源的数据，比如用户的输入
+
+
+url 和闭包，并以此提供一个非常简单且优雅的定义路由的方法 
+route:get('foo',function ){
+	return 'hello world';
+}
+
+路由必选参数 
+
+有时我们需要在路由钟不过urkl
+
+tests 目录中，exampletest.php 
+
+运行测试的时候，laval会设置自动环境为tesing laravel在测试时自动配置session和cache 驱动为数组驱动
+这意味着测试时不会持久化
+
+清楚配置缓存
+
+回去去诶的那个一些东西，是不是可以这样做
+
+php artisan make:test usertest 
+
+use illuminate\foundation\testing\withoutmiddleware 
+use issuminate\foundation\testing\databasemigrations
+
+laravel为生成http请求，测试输出，以及天聪表单提供了流失api，绝歌例子
+
+laravel 
+
+
+
+
+改的代码合并到1.30
+要求可以监控到map进程的数量，到数数
+
+修改维护时间到一个文件，
+
+做一个职业规划
+多刷题
+分支C++，go，还有管理，好好想想，到底主语言是C还是go
+架构师？架构师、需求分析师、技术总监、CTO的层面 
+记得多结交人脉
+https://blog.csdn.net/heiyeshuwu/article/details/40098043?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-6.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-6.control
+
+64号资源
+还有一个是更新
+
+login地址
+/data/sanxiao/t0/www/t0-sanxiao-ru2.game.koramgame.com/login.php
+平台信息
+
+//开发内网
+	$tmp = array();
+	$tmp['name'] = '内网192.168.1.31';
+	$tmp['res_url'] = 'http://192.168.1.31/shenmo2/res_url/';
+	$tmp['servlist_url'] = 'http://pl-kf-sanxiao-zh.game.kunlun.com/servlist_inner.php';
+	$tmp['is_test_platform'] = 1; //是否测试平台
+	$servinfo[] = $tmp;
+	
+	//资源待发布服
+	$tmp = array();
+	$tmp['name'] = '资源待发布服[ru2]';
+	$tmp['res_url'] = $base_res_url;
+	$tmp['servlist_url'] = 'http://pl-sanxiao-ru2.game.koramgame.com/servlist_test_editor.php';
+	$tmp['is_test_platform'] = 1;  //是否测试平台
+	!empty($report_url) && $tmp['report_url'] = $report_url;
+	!empty($report_crash_url) && $tmp['report_crash_url'] = $report_crash_url;		
+	$servinfo[] = $tmp;
+
+	//资源待发布服
+	$tmp = array();
+	$tmp['name'] = '资源提审服[ru2]';
+	$tmp['res_url'] =  $base_head_url . 'res'.$base_servlist_url . '/res_url_tishen/';
+	$tmp['servlist_url'] = 'http://pl-sanxiao-ru2.game.koramgame.com/servlist_test_editor.php';
+	$tmp['is_test_platform'] = 1;  //是否测试平台
+	!empty($report_url) && $tmp['report_url'] = $report_url;
+	!empty($report_crash_url) && $tmp['report_crash_url'] = $report_crash_url;
+	$servinfo[] = $tmp;
+}
+
+//对外的
+$tmp = array();
+
+$tmp['servlist_url'] = 'http://pl-sanxiao-ru2.game.koramgame.com/servlist_editor.php';
+
+
+//开发内网
+	$tmp['name'] = '内网192.168.1.31';
+	$tmp['res_url'] = 'http://192.168.1.31/shenmo2/res_url/';
+	$tmp['servlist_url'] = 'http://pl-kf-sanxiao-zh.game.kunlun.com/servlist_inner.php';
+
+	//资源待发布服
+	$tmp['name'] = '资源待发布服[ru2]';
+	$tmp['res_url'] = 'http://res-sanxiao-ru2.game.koramgame.com/res_url/';
+	$tmp['servlist_url'] = 'http://pl-sanxiao-ru2.game.koramgame.com/servlist_test_editor.php';
+
+	//资源待发布服
+	$tmp['name'] = '资源提审服[ru2]';
+	$tmp['res_url'] =  'http://res-sanxiao-ru2.game.koramgame.com//res_url_tishen/';
+	$tmp['servlist_url'] = 'http://pl-sanxiao-ru2.game.koramgame.com/servlist_test_editor.php';
+
+
+	//平台地址
+	pl-sanxiao-ru2.game.koramgame.com/servinfo.php
+	//login地址
+	http://t0-sanxiao-ru2.game.koramgame.com/login.php
+
+	
+
+	东南亚cent0 
+
+
+需要处理的问题集和
+
+了解下跨服的lua写法还有C++底层
+
+装gmt后台相关的东西
+pkadmin的问题要及时处理 加装服处理
+
+
+弄一个修改开服时间的后台功能
+
+gmt后台开发一个发送所有军团长邮件的东西 
+
+维护时间弄成方便管理的方式
+
+内存端口占用情况上报地址sgp迁移到全球包  
+
+数数上报存进数据库
+
+
+发邮件，禁止，发送全服 
+
+
+圣镜
+--检查元宝是否足够
+RechargeService:isEnoughGold(lplr, cost_gold)
+--使用元宝+充值元宝
+RechargeService:consumeGoldEx(lplr, lplr.db, cost_gold, ConsumeGoldDefs.SERVICE_ID_UNLOCK_MINGKA_SIZE, nil, '解锁命卡背包格子')
+
+main.php
+main.tpl
+cofig
+index.tpl
+base.php
+
+
+accoun.php
+common.php
+login.php
+checkLogin.php
+
+安装php-mysqlnd
+
+162.62.133.206
+curl -Ss "http://s1.ar.global.hoc.koramgame.com/for_backend/index.php?c=Server&a=OpenFuncList"
+
+一个月计划 
+
+背包结构
+
+都是添加到一块一块的
+
+道具同步逻辑规则
+
+访问http://s1.moyu.kunlun.com/for_backend/index.php?c=Csv&a=Equip 获取道具文件，返回各大区保存
+
+window general 
+
+时宇的脚本
+
+
+ 
+弄一个json自动编译出key的脚本 
+
+包裹保存一个ext植物信息
+
+杂草添加需要一个随机位置
+
+新增gm
+
+
+
+could not find driver 的问题 
+数据库连接失败
+gmt有两个pdo 一个是pdologManager，用的数据库密码在operation.php 上面 路径是F:\php_2\gmt\inf\operation.php
+
+
+魔域发布详细操作
+42.62.23.63
+cd /home/moyu_admin
+./jianzhu_script_overseas.sh
+./guoyin_script_oversea.sh
+
+
+cd /home/moyu_admin
+./jianzhu_script_overseas.sh
+./guoyin_script_oversea.sh
+
+
+失败的处理：
+发布机：gametempsgp.tar.gz => 中转机（106.75.138.123：10017）
+中转机=>东南亚S1（23.236.119.180）
+解压、会出现（scenes  script）两个文件夹
+将两个文件复制到  /data/moyu/publish/publish-game/目录（先将原来的删除）
+cd /data/moyu/publish/bin
+./all-publish-game.sh
+"23.236.119.154 22 monitor-game1.sgp.global.hoc.koramgame.com 4108 1 sgp"
+"23.236.119.180 22 monitor-kuafu1.sgp.global.hoc.koramgame.com 4108 2 sgp"
+
+
+#!/bin/bash
+
+cd /data/moyu/publish_res_64/self/ 
+
+pwd=$1
+if [[ $pwd != "jp" ]];then
+        echo "!!!请输入是国内更新(gn)，还是更新(jp)"
+        exit
+fi
+
+switch=`cat switch.conf`
+if [[ "$switch" != "0" && "$2" != "qr" ]];then
+        echo "上一次执行 prepare_publish.sh 后，未执行发布版本脚本 check_and_publish_version.sh "
+        echo "如果强制执行本次预发布资源脚本，需要要加上参数  qr .  如: ./prepare_publish.sh gn qr "
+        exit
+fi
+
+./rsync_static_res.sh moyu &
+
+echo "1" > switch.conf
+
+tail -f /data/moyu/log/rsync_passwd_res_moyu.log
+
+
+战龙测试激活码
+
+http://act-lod-us-game.arkgames.com/activation_code/index.php
+
+cid=1&activation_code=dy587dd152bb144&pid=3&server_id=4390901&ch_level=10
+
+{
+    "ret_msg": "success",
+    "ret_code": 3161,
+    "reward": "1,3,800|2,1104,5|1,2,10"
+}
+
+
+
+gmt act 第一级账号密码设置路径
+/data/zlcs/www/common/security.php
+
+
+ 3房屋设计
+
+ 4数数后台搭建
+
+ 5国印提供的后台同步工具，进行了解调试
+
+
+ 1.gmt后台时区管理（优先级一）  10.14
+2.gmt账号管理（优先级五）   10.14
+3.公告功能（优先级二）	   10.21  (需要先验收游戏正常公告功能)	
+（1）游戏展示
+（2）后台管理
+4.系统广播（优先级二）      10.28 (需要先验收游戏正常广播功能)
+（1）游戏展示
+（2）后台管理
+5.系统邮件（优先级三，邮件删除功能先暂不制作）   11.9（需要前端支持）
+（1）支持系统邮件在前端显示规则
+（2）支持邮件删除
+（3）支持邮件有效期
+6.gmt后台邮件（优先级三）		11.18	
+（1）发送邮件
+（2）管理系统邮件
+7.兑换码功能（优先级四）			11.30
+（1）gmt后台生成礼包码功能（需新增单一模式和复合模式，同时要兼容已有的配表模式，且注意策划配表模式的礼包码不能和新增的模式重叠）
+（2）管理礼包码功能
+（3）礼包码查询
+8.用户管理（查看下打点是否已经涵盖，未涵盖的优先考虑是否通过打点实现）（优先级六） 12.9
+
+
+魔域游戏服重启启动操作
+
+进入对应大区S1服务器 /data/moyu/publish/publish-crond
+修改 game-template
+执行 make-crond-game.sh 生成对应cron文件
+
+进入 /data/moyu/publish/bin
+执行 all-publish-crond-game.sh 
+
+
+common config file is not exists
+gmt webroot路径里面有个防跨站文件，删掉即可user.ini
+
+亚龙删除规则
+\{[^\{\}]*\{[^\{\}]*\}[^\{\}]*"yalong_id":[0-9]*[1-3],[^\{\}]*\},
+
+
+
+My lord，\n 本次测试预计将在2022年9月12日 7:00（UTC-7）结束
+<image>图片名1</image>
+如果您喜欢我们游戏，欢迎加入我们的Discord。<color=blue1><link id=show_web|http://www.baidu.com>描述</link></color>\n
+<image>图片名2</image>
+
+
+GMT后台迁移后，要修改的东西，1时区
+1 index.main.html
+
+ 2noticeserver 添加公告，有效时间迁移
+.strtotime($_POST['begTime']) - 18000, //有效时间
+
+
+\<image\>文件名\</image\>123123
+
+SELECT *
+FROM tbl_player_character
+WHERE player_id =1087463860

@@ -1,0 +1,139 @@
+####   约束条件：                                                                                                                                     ######
+####   1.游戏服的首服s1,pk服首服是pk1                                    ######
+####   2.首服必定是发布机，脚本会自动把首服的ip增加到防火墙中，以后大区都以首服为模板    ######
+####   3.首服必定也是发布机的位置，发布机的由技术搭建                                                                 ######
+####   4.装完服一定要查看装服log,出现ERROR错误请联系刘金林(8142)              ######
+【COMM】2016-08-18 16:16:53 => ARENA_ID: 907
+【COMM】2016-08-18 16:16:53 => DOMAIN_SUFFIX: .moyu.kimi.com.tw
+【COMM】2016-08-18 16:16:53 => rsync_targetfolder:
+【COMM】2016-08-18 16:16:53 => rsync_password: backup7hyDhe4vaxMo
+【COMM】2016-08-18 16:16:53 => init vars start
+OK
+【COMM】2016-08-18 16:16:53 => exitcode:200
+【COMM】2016-08-18 16:16:53 => check whether db is installed or not
+【COMM】2016-08-18 16:16:53 => assure game server not installed yet
+【COMM】2016-08-18 16:16:53 => installing db
+【COMM】2016-08-18 16:16:53 => assure proxy port available
+【COMM】2016-08-18 16:16:53 => vars check finished end
+【COMM】2016-08-18 16:16:54 => unzip and init
+【COMM】2016-08-18 16:16:54 => targetDir: /data/moyu/pk7
+【COMM】2016-08-18 16:16:54 => unpack servers_dist.tar.gz ...
+【COMM】2016-08-18 16:17:03 => moving data to target folder...
+【COMM】2016-08-18 16:17:03 => ProxyServerType: 2 disable_robot:1
+【COMM】2016-08-18 16:17:03 => chdir /data/moyu/pk7
+【COMM】2016-08-18 16:17:03 => FROM_LANG: cn
+【COMM】2016-08-18 16:17:03 => FROM_DB_NAME: moyu_pk1_20160818_all
+【COMM】2016-08-18 16:17:03 => start install pk7 form pk1 ...
+【COMM】2016-08-18 16:17:03 => install crontab
+【INFO】2016-08-18 16:17:03 => 准备用^ZONE=.*替换文件/etc/sysconfig/clock
+【COMM】2016-08-18 16:17:04 => install /etc/cron.d/game-serv-pk7 by /etc/cron.d/game-serv-pk1
+【INFO】2016-08-18 16:17:04 => 准备用pk1.moyu.kimi.com.tw替换文件etc/game-serv-pk1
+【INFO】2016-08-18 16:17:04 => 准备用moyu/pk1替换文件etc/game-serv-pk1
+【INFO】2016-08-18 16:17:04 => 准备用pk1\([^0-9]\)替换文件etc/game-serv-pk1
+【WARNNING】2016-08-18 16:17:04 => 在/etc/hosts找不到127.0.0.1[\t ]*pk7.moyu.kimi.com.tw
+【INFO】2016-08-18 16:17:04 => 127.0.0.1[\t ]*pk7.moyu.kimi.com.tw 不在/etc/hosts中 ，增加一条
+【COMM】2016-08-18 16:17:04 => intall config files
+【COMM】2016-08-18 16:17:04 => install baseserver
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*-*[\t ]*\[baseserver\][\t ]*=替换文件/data/moyu/pk7/bin/servers.cfg.lua
+【COMM】2016-08-18 16:17:04 => install proxyserver
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*-*[\t ]*\[proxyserver\][\t ]*=替换文件/data/moyu/pk7/bin/servers.cfg.lua
+【COMM】2016-08-18 16:17:04 => install dbserver
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*-*[\t ]*\[dbserver\][\t ]*=替换文件/data/moyu/pk7/bin/servers.cfg.lua
+【COMM】2016-08-18 16:17:04 => install mapserver
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*-*[\t ]*\[mapserver\][\t ]*=替换文件/data/moyu/pk7/bin/servers.cfg.lua
+【INFO】2016-08-18 16:17:04 => 准备用SERV[\t ]*=.*替换文件/data/moyu/pk7/bin/set_stop_time.sh
+【INFO】2016-08-18 16:17:04 => 准备用.moyu.kimi.com.tw替换文件/data/moyu/pk7/bin/set_stop_time.sh
+【INFO】2016-08-18 16:17:04 => 准备用SERV[\t ]*=.*替换文件/data/moyu/pk7/bin/set_start_time.sh
+【INFO】2016-08-18 16:17:04 => 准备用.moyu.kimi.com.tw替换文件/data/moyu/pk7/bin/set_start_time.sh
+【INFO】2016-08-18 16:17:04 => 准备用game-serv-pk1.moyu.kimi.com.tw替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用DbServerHost[\t ]*=[\t ]*'[0-9.]*'替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用BaseServerHost[\t ]*=[\t ]*'[0-9.]*'替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用LANG[\t ]*=[\t ]*'[a-z]*'替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用ProxyServerHost[\t ]*=[\t ]*'[0-9.]*'替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用ProxyServerIp[\t ]*=[\t ]*'[0-9.]*'替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用ProxyServerIp=[\t ]*'[0-9.]*'替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用ProxyPort[\t ]*=[\t ]*[0-9']*替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用PRODUCT_ID[\t ]*=[\t 0-9]*替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用ARENA_ID[\t ]*=[\t ]*[0-9']*替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用VOUCH_AREA_CODE[\t ]*=[\t ]*[0-9']*替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用SERVER_OPEN_DATE[ \t]*=[ \t]*[0-9]*替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用moyu/pk1替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用name[\t ]*=[\t ]*['"][0-9a-zA-Z']*['"]替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*hostname[\t ]*=[\t ]*["'][0-9.]*["']替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用database[\t ]*=[\t ]*["'].*["']替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用username[\t ]*=[\t ]*["'][0-9a-z_A-A]*["']替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用password[\t ]*=[\t ]*["'].*["']替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用RegionServerToken[\t ]*=[\t ]*["'].*["']替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用DOMAIN_SUFFIX[\t ]*=[\t ]*["'].*["']替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用RegionServerDomain[\t ]*=[\t ]*["'].*["']替换文件/data/moyu/pk7/conf/private.lua
+【INFO】2016-08-18 16:17:04 => 准备用RegionServerDomainAddGold[\t ]*=[\t ]*["'].*["']替换文件/data/moyu/pk7/conf/private.lua
+【COMM】2016-08-18 16:17:04 => install game-serv-pk7.moyu.kimi.com.tw by game-serv-pk1.moyu.kimi.com.tw
+【COMM】2016-08-18 16:17:04 => install pk7.moyu.kimi.com.tw by pk1.moyu.kimi.com.tw
+【COMM】2016-08-18 16:17:04 => modify webproxy.php
+【COMM】2016-08-18 16:17:04 => modify config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*define('CONFIG_REGION_ID'.*);替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*define('CONFIG_PRODUCT_ID'.*);替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*define('WEIHU_WEEK.*;替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*define('WEIHU_BEGIN_HOUR.*;替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*define('WEIHU_END_HOUR.*;替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*define('CONFIG_PORT'.*)替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*define('GAME_AREA_ID'.*);替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*define('BACKEND_IP'.*);替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*define('SERVER_SIGN'.*)替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*define('DOMAIN_SUFFIX'.*)替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*define('CONFIG_PROXY_HOST'.*)替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*define('CONFIG_PROXY_IPS'.*)替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*$config_server.*替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*$config_database.*替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*$config_user.*替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:04 => 准备用[\t ]*$config_password.*替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【WARNNING】2016-08-18 16:17:04 => 在文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php没有pk1.moyu.kimi.com.tw需要替换，返回
+【WARNNING】2016-08-18 16:17:04 => 在文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php没有moyu/pk1需要替换，返回
+【INFO】2016-08-18 16:17:04 => 准备用timezone_set.*替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:05 => 准备用pk1.moyu.kimi.com.tw替换文件bin/moyu_utils.sh
+【INFO】2016-08-18 16:17:05 => 准备用[\t ]*define('LANG.*;替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:05 => 准备用[\t ]*define('CONFIG_KLSSO_HOST_URL.*;替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【INFO】2016-08-18 16:17:05 => 准备用[\t ]*define('CONFIG_KLSSO_PARSER_FUNCTION.*;替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/config/config.php
+【COMM】2016-08-18 16:17:05 => install mysql ...
+moyu_pk1_data/
+moyu_pk1_data/moyu_pk1_20160818_all.sql
+【INFO】2016-08-18 16:17:05 => 准备用\['Servers'\]\[$i\]\['verbose'\].*替换文件/data/moyu/pk7/www/pk7.moyu.kimi.com.tw/dbms123/config.inc.php
+【COMM】2016-08-18 16:17:05 => install database moyu_pk7 from moyu_pk1_20160818_all ...
+【WARNNING】2016-08-18 16:17:12 => 在/data/moyu/bin/start_web.conf找不到/data/moyu/log/pipe/fifo_log_pipe_pk7
+【COMM】2016-08-18 16:17:12 => install rsyncd.conf
+【COMM】2016-08-18 16:17:12 => install rc.local
+【WARNNING】2016-08-18 16:17:12 => 在/etc/rc.d/rc.local找不到/data/moyu/pk7/bin/run_servers.lua
+【COMM】2016-08-18 16:17:12 => install security access
+【COMM】2016-08-18 16:17:12 => sysctl is ready!
+【COMM】2016-08-18 16:17:12 => open file limit has seted
+【WARNNING】2016-08-18 16:17:12 => 在/etc/rc.d/rc.fw找不到40541
+【INFO】2016-08-18 16:17:12 => iptable中无数据，现在往rc.fw中的第10行加入一条40541
+【COMM】2016-08-18 16:17:12 => begin addline
+【COMM】2016-08-18 16:17:12 => restart nginx
+【COMM】2016-08-18 16:17:15 => restart rsync
+【COMM】2016-08-18 16:17:16 => clear noneed data ...
+OK
+【COMM】2016-08-18 16:17:29 => 200
+【INFO】2016-08-18 16:17:29 => 准备用pk1替换文件/data/moyu/pk7/bin/backup_db.sh
+【INFO】2016-08-18 16:17:29 => 准备用DBBACKUP_TAG=.*替换文件/data/moyu/pk7/bin/backup_db.sh
+【WARNNING】2016-08-18 16:17:29 => 在文件/data/moyu/pk7/bin/auto_update_pklist.sh没有pk1需要替换，返回
+【INFO】2016-08-18 16:17:29 => 准备用rsync_targetfolder=.*替换文件/data/moyu/pk7/bin/backup_db.sh
+【INFO】2016-08-18 16:17:29 => 准备用GAME_TIME_ZONE[\t ]*=.*替换文件/data/moyu/pk7/conf/private.lua
+【COMM】2016-08-18 16:17:29 => done!
+【INFO】2016-08-18 16:17:30 => curl -Ss http://pk1.moyu.kimi.com.tw/ServerList.php?token=61ca2710db01835143525a150036ce9a&act=checkServer&server=pk7
+【WARNNING】2016-08-18 16:17:30 => server-list: check server pk7 fail, please concat RTX:8142 to add again! thanks! BASE_SERVER_EXTERNAL_IP = 203.75.148.151 , relate to
+【COMM】2016-08-18 16:17:30 => SERVER
+【COMM】2016-08-18 16:17:30 => NOT
+【COMM】2016-08-18 16:17:30 => EXISTS
+【INFO】2016-08-18 16:17:30 => 准备自动添加游戏服列表的地址!!
+907 40541 pk7.moyu.kimi.com.tw pk 203.75.148.151 907
+PHP_TOKEN:6b163a3a2e858d9cbddbc4f2ffa4e6c8
+succ
+http://pkadmin.moyu.kimi.com.tw/interface_pk_server.php?aid=907&port=40541&domain=pk7.moyu.kimi.com.tw&type=pk&ip=203.75.148.151&s=6b163a3a2e858d9cbddbc4f2ffa4e6c8&pkid=907
+PHP_RETsucc
+【INFO】2016-08-18 16:17:30 => 增加kill自启逻辑
+【WARNNING】2016-08-18 16:17:30 => 在/data/moyu/bin/autocksrv.sh找不到^SERV_NAMES=(.*[\t\ ]pk7[\t\ ].*
+【INFO】2016-08-18 16:17:30 => 准备用^SERV_NAMES=(替换文件/data/moyu/bin/autocksrv.sh
+【INFO】2016-08-18 16:17:30 => key安装...
+【INFO】2016-08-18 16:17:30 => 安装klexec!!!!
+【INFO】2016-08-18 16:17:30 => 安装klexec完成！！
